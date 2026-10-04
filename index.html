@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaTech Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <h1>NovaTech Store</h1>
+
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#cart" id="cart-link"> 🛒 Cart (0)</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Power Your World with NovaTech</h2>
+            <p>Discover the latest electronics, smart devices, and tech essentials designed for modern life.</p>
+            <button id="shop-now-btn">Shop Now</button>
+        </section>
+        <section id="products">
+            <h2>Explore Our Products</h2>
+            <p>Find the latest electronics and smart technology for your everyday needs.</p>
+            <input type="text" placeholder="Search products...">
+            <div id="categories" class="category-container">
+                <button data-category="all">All</button>
+                <button data-category="smartphones">Smartphones</button>
+                <button data-category="laptops">Laptops</button>
+                <button data-category="mobile-accessories">Accessories</button>
+                <button data-category="tablets">Tablets</button>
+            </div>
+            <div class="product-controls">
+
+                <input type="number" placeholder="Min price">
+                <input type="number" placeholder="Max price">
+                <button id="apply-price">Apply Price</button>
+                <select>
+                    <option>Sort Products</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Name: A to Z</option>
+                </select>
+            </div>
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="https://placehold.co/300x200" alt="Wireless Headphones">
+                    <p class="product-category">Electronics</p>
+
+                    <h3 class="product-title">Wireless Headphones</h3>
+
+                    <p class="product-price">$49.99</p>
+
+                    <p class="product-rating">Rating: 4.5</p>
+                    <div class="product-actions">
+                        <button>Add to Cart</button>
+                        <button>View Details</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section id="product-details">
+            <h2>Product Details</h2>
+            <div class="details-container"></div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div class="cart-container"></div>
+            <button type="button" id="checkout-btn">Proceed to Checkout</button>
+        </section>
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="order-summary-items"></div>
+                <p id="order-summary-total"></p>
+            </div>
+            <form action="">
+                <input type="text" id="name" placeholder="Enter Your Name" required>
+                <small class="error-message" id="name-error"></small>
+
+                <input type="email" id="email" placeholder="Enter Your Email" required>
+                <small class="error-message" id="email-error"></small>
+
+                <input type="tel" id="phone" placeholder="Enter Your Number" required>
+                <small class="error-message" id="phone-error"></small>
+
+                <textarea name="address" id="address" placeholder="Enter Your Full Address" required></textarea>
+                <small class="error-message" id="address-error"></small>
+                <button type="submit">Place Order</button>
+            </form>
+            <div id="order-success" class="order-success" hidden>
+                <h2>✓ Order Confirmed!</h2>
+                <p>Thank you for your order.</p>
+                <p>Your order has been placed successfully.</p>
+                <button type="button" id="continue-shopping">Continue Shopping</button>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About NovaTech</h2>
+            <p>NovaTech Store brings modern electronics and everyday tech essentials together in one convenient place.
+            </p>
+        </section>
+        <section id="contact">
+            <form action="" id="contact-form">
+                <h2>Get in Touch</h2>
+                <input type="text" id="contact-name" placeholder="Enter Your Name">
+
+                <input type="email" id="contact-email" placeholder="Enter Your Email">
+
+                <textarea name="message" id="contact-message" placeholder="Enter Your Message"></textarea>
+                <button type="submit">Submit</button>
+                <p id="contact-success" hidden></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>NovaTech Store</p>
+        <p>Smart technology. Better everyday experiences.</p>
+        <p>© 2026 NovaTech Store. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
